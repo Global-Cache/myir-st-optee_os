@@ -80,6 +80,10 @@ $(call force,CFG_STM32MP_CLK_CORE,y)
 CFG_STM32MP_REMOTEPROC ?= y
 $(call force,CFG_STM32MP25_CLK,y)
 $(call force,CFG_STM32MP25_RSTCTRL,y)
+$(call force,CFG_STM32_PKA,n)
+$(call force,CFG_STM32_SAES,n)
+$(call force,CFG_STM32_CRYP,n)
+$(call force,CFG_STM32_HASH,n)
 
 ifneq ($(filter $(CFG_EMBED_DTB_SOURCE_FILE),$(flavorlist-1G)),)
 CFG_DRAM_SIZE    ?= 0x40000000
