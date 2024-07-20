@@ -1,7 +1,11 @@
 flavor_dts_file-257F_DK = stm32mp257f-dk.dts
 flavor_dts_file-257F_EV1 = stm32mp257f-ev1.dts
+flavor_dts_file-257X_MYB2GB = myb-stm32mp257x-2GB.dts
+flavor_dts_file-257X_MYB1GB = myb-stm32mp257x-1GB.dts
 
 flavorlist-MP25 = $(flavor_dts_file-257F_DK) \
+  		  $(flavor_dts_file-257X_MYB2GB) \
+  		  $(flavor_dts_file-257X_MYB1GB) \
 		  $(flavor_dts_file-257F_EV1)
 
 # External device tree default path
@@ -85,7 +89,7 @@ $(call force,CFG_STM32_SAES,n)
 $(call force,CFG_STM32_CRYP,n)
 $(call force,CFG_STM32_HASH,n)
 
-ifneq ($(filter $(CFG_EMBED_DTB_SOURCE_FILE),$(flavorlist-1G)),)
+ifneq ($(filter $(CFG_EMBED_DTB_SOURCE_FILE),$(flavorlist-1G) $(flavor_dts_file-257X_MYB1GB) ),)
 CFG_DRAM_SIZE    ?= 0x40000000
 endif
 
