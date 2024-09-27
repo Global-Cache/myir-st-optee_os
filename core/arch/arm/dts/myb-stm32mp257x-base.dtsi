@@ -187,8 +187,8 @@
 			};
 			vdd2_ddr: buck6 {
 				regulator-name = "vdd2_ddr";
-				regulator-min-microvolt = <1100000>;
-				regulator-max-microvolt = <1100000>;
+				regulator-min-microvolt = <1150000>;
+				regulator-max-microvolt = <1150000>;
 				regulator-always-on;
 				//regulator-pull-down;
 				st,pwrctrl-sel = <1>;
