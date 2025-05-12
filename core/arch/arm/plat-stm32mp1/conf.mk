@@ -14,6 +14,11 @@ flavor_dts_file-157F_EV1 = stm32mp157f-ev1.dts
 flavor_dts_file-135F_DK = stm32mp135f-dk.dts
 flavor_dts_file-135X_MYIR256M = myb-stm32mp135x-256m.dts
 flavor_dts_file-135X_MYIR512M = myb-stm32mp135x-512m.dts
+flavor_dts_file-135X_MYIR512M_GC_HUB = myb-stm32mp135x-512m-gc-hub.dts
+flavor_dts_file-135X_MYIR512M_GC_2IO_2RT_1USB = myb-stm32mp135x-512m-gc-2io-2rt-1usb.dts
+flavor_dts_file-135X_MYIR512M_GC_2IO_SL_1USB = myb-stm32mp135x-512m-gc-2io-sl-1usb.dts
+flavor_dts_file-135X_MYIR512M_GC_4IO_2USB = myb-stm32mp135x-512m-gc-4io-2usb.dts
+flavor_dts_file-135X_MYIR512M_GC_PROTO_R03 = myb-stm32mp135x-512m-gc-proto-r03.dts
 
 flavorlist-256M = $(flavor_dts_file-135X_MYIR256M)
 
@@ -22,7 +27,12 @@ flavorlist-512M = $(flavor_dts_file-157A_DK1) \
 		  $(flavor_dts_file-157D_DK1) \
 		  $(flavor_dts_file-157F_DK2) \
 		  $(flavor_dts_file-135F_DK) \
-		  $(flavor_dts_file-135X_MYIR512M)
+		  $(flavor_dts_file-135X_MYIR512M) \
+		  $(flavor_dts_file-135X_MYIR512M_GC_HUB) \
+		  $(flavor_dts_file-135X_MYIR512M_GC_2IO_2RT_1USB) \
+		  $(flavor_dts_file-135X_MYIR512M_GC_2IO_SL_1USB) \
+		  $(flavor_dts_file-135X_MYIR512M_GC_4IO_2USB) \
+		  $(flavor_dts_file-135X_MYIR512M_GC_PROTO_R03)
 
 flavorlist-1G = $(flavor_dts_file-157A_ED1) \
 		$(flavor_dts_file-157A_EV1) \
@@ -48,7 +58,12 @@ flavorlist-MP15 = $(flavor_dts_file-157A_DK1) \
 
 flavorlist-MP13 = $(flavor_dts_file-135F_DK) \
 		$(flavor_dts_file-135F_MYIR256M) \
-		$(flavor_dts_file-135F_MYIR512M)
+		$(flavor_dts_file-135F_MYIR512M) \
+		$(flavor_dts_file-135X_MYIR512M_GC_HUB) \
+		$(flavor_dts_file-135X_MYIR512M_GC_2IO_2RT_1USB) \
+		$(flavor_dts_file-135X_MYIR512M_GC_2IO_SL_1USB) \
+		$(flavor_dts_file-135X_MYIR512M_GC_4IO_2USB) \
+		$(flavor_dts_file-135X_MYIR512M_GC_PROTO_R03)
 
 ifneq ($(PLATFORM_FLAVOR),)
 ifeq ($(flavor_dts_file-$(PLATFORM_FLAVOR)),)
